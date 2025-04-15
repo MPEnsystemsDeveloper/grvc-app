@@ -1,0 +1,121 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fefaf1; /* Soft beige */
+    color: #2d4739; /* Deep green text */
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: #7fb77e; /* Soft green */
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.top-bar h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.top-bar button {
+    background-color: #ffffff;
+    color: #4e6b50;
+    border: 1px solid #c9e2cd;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.top-bar button:hover {
+    background-color: #e5f6e0;
+    transform: scale(1.05);
+}
+
+/* Feedback Modal Popup */
+.feedback-popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(45, 71, 57, 0.5);
+    backdrop-filter: blur(4px);
+    padding-top: 100px;
+}
+
+.feedback-content {
+    background-color: #ffffff;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #cde3d2;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    animation: fadeIn 0.4s ease;
+}
+
+/* Feedback Form */
+.feedback-content textarea {
+    width: 90%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #cde3d2;
+    border-radius: 8px;
+    background-color: #f8fdf5;
+    resize: vertical;
+    font-size: 1rem;
+}
+
+.feedback-content button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.feedback-content button[type="submit"] {
+    background-color: #7fb77e;
+    color: white;
+}
+
+.feedback-content button[type="submit"]:hover {
+    background-color: #689b68;
+    transform: scale(1.05);
+}
+
+.feedback-content button[type="button"] {
+    background-color: #eee;
+    color: #4e6b50;
+}
+
+.feedback-content button[type="button"]:hover {
+    background-color: #e1e1e1;
+    transform: scale(1.03);
+}
+
+/* PDF Frame */
+iframe {
+    border: none;
+    margin-top: 20px;
+    border-radius: 12px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

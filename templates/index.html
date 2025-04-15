@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select PDD</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Select PDD to View</h2>
+        <form action="/view_pdf" method="post">
+            <input type="text" name="full_name" placeholder="Your Full Name" required><br>
+            <input type="email" name="email" placeholder="Your Email" required><br>
+            <input type="text" name="organization" placeholder="Organization" required><br>
+            <select name="reason" required>
+                <option value="">-- Reason To View --</option>
+                <option value="Academic">Academic</option>
+                <option value="Business">Business</option>
+                <option value="Government">Government</option>
+                <option value="Private">Private</option>
+                <option value="NGO/Non-Profit">NGO/Non-Profit</option>
+                <option value="Farmer/Producer">Farmer/Producer</option>
+                <option value="Investor">Investor</option>
+            </select><br>          
+            <select name="pdd" required>
+                <option value="">-- Select PDD --</option>
+                <option value="Ahilyanagar FPO 1">Ahilyanagar FPO 1</option>
+                <option value="Ahilyanagar FPO 2">Ahilyanagar FPO 2</option>
+                <option value="Ahilyanagar FPO 3">Ahilyanagar FPO 3</option>
+                <option value="Ahilyanagar FPO 4">Ahilyanagar FPO 4</option>
+                <option value="Ahilyanagar FPO 5">Ahilyanagar FPO 5</option>
+                <option value="Ahilyanagar FPO 6">Ahilyanagar FPO 6</option>
+                <option value="Buldhana FPO 1">Buldhana FPO 1</option>
+                <option value="Chandrapur FPO 1">Chandrapur FPO 1</option>
+                <option value="Chandrapur FPO 2">Chandrapur FPO 2</option>
+                <option value="Chandrapur FPO 3">Chandrapur FPO 3</option>
+                <option value="Chandrapur FPO 4">Chandrapur FPO 4</option>
+                <option value="Chandrapur FPO 5">Chandrapur FPO 5</option>
+                <option value="Chandrapur FPO 6">Chandrapur FPO 6</option>
+                <option value="Chhindwara FPO 1">Chhindwara FPO 1</option>
+                <option value="Chhindwara FPO 2">Chhindwara FPO 2</option>
+                <option value="Gadchiroli FPO 1">Gadchiroli FPO 1</option>
+                <option value="Gadchiroli FPO 2">Gadchiroli FPO 2</option>
+                <option value="Gadchiroli FPO 3">Gadchiroli FPO 3</option>
+                <option value="Gadchiroli FPO 4">Gadchiroli FPO 4</option>
+                <option value="algaon FPO 1">Jalgaon FPO 1</option>
+                <option value="Jalgaon FPO 2">Jalgaon FPO 2</option>
+                <option value="Jalgaon FPO 3">Jalgaon FPO 3</option>
+                <option value="Jalgaon FPO 4">Jalgaon FPO 4</option>
+                <option value="Jalgaon FPO 5">Jalgaon FPO 5</option>
+                <option value="Jalgaon FPO 6">Jalgaon FPO 6</option>
+                <option value="Jalgaon FPO 7">Jalgaon FPO 7</option>
+                <option value="Nagpur FPO 1">Nagpur FPO 1</option>
+                <option value="Nandurbar FPO 1">Nandurbar FPO 1</option>
+                <option value="Nandurbar FPO 2">Nandurbar FPO 2</option>
+                <option value="Nandurbar FPO 3">Nandurbar FPO 3</option>
+                <option value="Nandurbar FPO 4">Nandurbar FPO 4</option>
+                <option value="Nandurbar FPO 5">Nandurbar FPO 5</option>            
+                <option value="Nandurbar FPO 6">Nandurbar FPO 6</option>
+                <option value="Shahdol FPO 1">Shahdol FPO 1</option>
+                <option value="Shahdol FPO 2">Shahdol FPO 2</option>
+                <option value="Singrauli FPO 1">Singrauli FPO 1</option>
+                <option value="Singrauli FPO 2">Singrauli FPO 2</option>
+            </select><br>
+            <button type="submit">Submit</button>
+            <a href="https://sites.google.com/mpensystems.com/grvcdashboard/home" class="button">Return to Home</a>
+        </form>
+    </div>
+</body>
+</html>

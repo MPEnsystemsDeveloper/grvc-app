@@ -1,0 +1,42 @@
+<!-- templates/view_pdf.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View PDF</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/view_pdf.css') }}">
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+    <h2>PDF Viewer</h2>
+    <button onclick="openFeedback()">Give Feedback</button>
+</div>
+
+<!-- Feedback Modal -->
+<div id="feedbackModal" class="feedback-popup">
+    <div class="feedback-content">
+        <form method="POST" action="/submit_feedback">
+            <input type="hidden" name="row_number" value="{{ row_number }}">
+            <label for="feedback">Your Feedback:</label><br>
+            <textarea name="feedback" rows="4" required></textarea><br>
+            <button type="submit">Submit</button>
+            <button type="button" onclick="closeFeedback()">Cancel</button>
+        </form>
+    </div>
+</div>
+
+<!-- PDF Viewer -->
+<iframe src="{{ pdf_url }}" width="100%" height="600px"></iframe>
+
+<script>
+    function openFeedback() {
+        document.getElementById("feedbackModal").style.display = "block";
+    }
+    function closeFeedback() {
+        document.getElementById("feedbackModal").style.display = "none";
+    }
+</script>
+
+</body>
+</html>
